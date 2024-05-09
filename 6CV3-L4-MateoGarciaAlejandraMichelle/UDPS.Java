@@ -16,10 +16,10 @@ public class UDPS{
                //recibir los paquetes y ensamblarlos
               ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
                 for (int i = 0; i <npaq; i++) {
-                    byte[] recbdato = new byte[1024];
-                    DatagramPacket rcbpaq = new DatagramPacket(recbdato, recbdato.length);
+                    byte[] recbdato = new byte[1024]; /*donde se almacenan los paquetes*/
+                    DatagramPacket rcbpaq = new DatagramPacket(recbdato, recbdato.length);//revibe los paqueres
                     s.receive(rcbpaq);
-                    outputStream.write(rcbpaq.getData(), 0, rcbpaq.getLength());
+                    outputStream.write(rcbpaq.getData(), 0, rcbpaq.getLength());//escribe enel 
                 }
 
                 String receivedMessage = new String(outputStream.toByteArray());
@@ -28,14 +28,14 @@ public class UDPS{
               
                // Envío de la respuesta al cliente
                System.out.println("Escribe tu respuesta: ");
-               BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+               BufferedReader br = new BufferedReader(new InputStreamReader(System.in));// el biffer pude el mmensaje para enviarlos
                String mensaje = br.readLine();
                byte[] b = mensaje.getBytes();
                DatagramPacket sendPacket = new DatagramPacket(b, b.length, receivePacket.getAddress(), receivePacket.getPort());
-               s.send(sendPacket);
+               s.send(sendPacket);//envia el paquee
 
                
-            }//for
+            }//for 
             //s.close()
         }catch(Exception e){
                 e.printStackTrace();
