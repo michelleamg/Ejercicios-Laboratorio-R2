@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CprimD",
+            "request": "launch",
+            "mainClass": "CprimD",
+            "projectName": "6CV3-L5- MateoGarciaAlejandra_719f1ed0"
+        },
+        {
+            "type": "java",
+            "name": "SPrimD",
+            "request": "launch",
+            "mainClass": "SPrimD",
+            "projectName": "6CV3-L5- MateoGarciaAlejandra_719f1ed0"
+        },
+        {
+            "type": "java",
+            "name": "UDPCliente",
+            "request": "launch",
+            "mainClass": "UDPCliente",
+            "projectName": "6CV3-L5- MateoGarciaAlejandra_719f1ed0"
+        },
+        {
+            "type": "java",
+            "name": "UDPServidor",
+            "request": "launch",
+            "mainClass": "UDPServidor",
+            "projectName": "6CV3-L5- MateoGarciaAlejandra_719f1ed0"
+        }
+    ]
+}
